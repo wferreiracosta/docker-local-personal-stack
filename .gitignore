@@ -1,0 +1,12 @@
+.buildpath
+.settings/
+.project
+*.patch
+.idea/
+.git/
+.env
+.DS_Store
+*.cache
+
+databases/var
+databases/var/*
