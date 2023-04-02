@@ -1,12 +1,14 @@
 version: '3'
 
-services:
+volumes:
+  data:
 
+services:
   mariadb:
     container_name: mariadb
     image: mariadb:latest
     volumes:
-      - ./var/mariadb:/var/lib/mysql
+      - data:/var/lib/mariadb
     ports:
       - 3306:3306
     environment:

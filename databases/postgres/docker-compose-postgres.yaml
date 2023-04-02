@@ -1,7 +1,9 @@
 version: '3'
 
-services:
+volumes:
+  data:
 
+services:
   postgres:
     container_name: postgres
     image: postgres
@@ -12,7 +14,7 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - ./var/postgres:/var/lib/postgresql/data
+      - data:/var/lib/postgresql
     networks:
       - global-default
 
@@ -25,7 +27,7 @@ services:
     ports:
       - 5050:80
     volumes:
-      - ./var/pgadmin4:/var/lib/pgadmin
+      - data:/var/lib/pgadmin
     networks:
       - global-default
 
