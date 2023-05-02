@@ -27,7 +27,7 @@ services:
     ports:
       - 5050:80
     volumes:
-      - data:/var/lib/pgadmin
+      - ./var/postgres:/var/lib/postgresql/data
     networks:
       - global-default
 
