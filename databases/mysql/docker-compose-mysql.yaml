@@ -1,0 +1,22 @@
+version: "3.3"
+
+volumes:
+  data:
+
+services:
+  mysql:
+    image: mysql
+    ports:
+      - "3306:3306"
+    container_name: mysql
+    networks:
+      - global-default
+    volumes:
+      - data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: localdatabase
+
+networks:
+  global-default:
+    external: true

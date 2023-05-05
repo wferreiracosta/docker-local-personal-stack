@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+
+  localstack:
+    container_name: localstack
+    image: localstack/localstack
+    networks:
+      - global-default
+    ports:
+      - 4566:4566 # sqs
+      - 4572:4572 # s3
+    environment:
+      - SERVICES=s3,sqs
+      - EDGE_PORT=4566
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
+      - AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+      - AWS_DEFAULT_REGION=us-east-1
+      - AWS_DEFAULT_OUTPUT=json
+
+networks:
+  global-default:
+    external: true
