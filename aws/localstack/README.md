@@ -54,10 +54,10 @@ aws --endpoint-url=http://0.0.0.0:4566 sqs receive-message --queue-url http://0.
 ### Criar bucket
 
 ```
-aws --endpoint-url=http://localhost:4572 s3api create-bucket --bucket myBucketTest
+aws --endpoint-url=http://localhost:4566 s3api create-bucket --bucket myBucketTest
 ```
 
 ### Listar todos os buckets
 ```
-aws --endpoint-url=http://localhost:4572 s3api list-buckets
+aws --endpoint-url=http://localhost:4566 s3api list-buckets
 ```
