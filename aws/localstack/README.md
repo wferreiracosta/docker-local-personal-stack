@@ -61,3 +61,8 @@ aws --endpoint-url=http://localhost:4566 s3api create-bucket --bucket myBucketTe
 ```
 aws --endpoint-url=http://localhost:4566 s3api list-buckets
 ```
+
+### Abrir arquivo
+```
+http://localhost:4566/{bucket}/{arquivo}
+```
