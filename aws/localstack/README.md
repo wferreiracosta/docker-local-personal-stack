@@ -10,17 +10,6 @@ docker compose -f aws/docker-compose-sqs.yaml up
 ```
 http://localhost:4566/health
 ```
-
-## Acessar cli do container
-
-```
-docker exec -it localstack /bin/bash
-```
-
-### Verificar serviços ativos
-```
-https://0.0.0.0:4566/health
-```
 Exemplo:
 ```
 {
@@ -33,6 +22,12 @@ Exemplo:
     }
 }
 
+```
+
+## Acessar cli do container
+
+```
+docker exec -it localstack /bin/bash
 ```
 
 ## SQS
