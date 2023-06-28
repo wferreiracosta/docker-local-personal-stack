@@ -6,6 +6,11 @@
 docker compose -f aws/docker-compose-sqs.yaml up
 ```
 
+## Verificar serviços disponiveis
+```
+http://localhost:4566/health
+```
+
 ## Acessar cli do container
 
 ```
