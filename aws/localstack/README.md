@@ -3,7 +3,7 @@
 ## Iniciar container
 
 ```
-docker compose -f aws/docker-compose-sqs.yaml up
+docker compose -f aws/docker-compose-localstack.yaml up
 ```
 
 ## Verificar serviços disponiveis
