@@ -5,7 +5,7 @@ volumes:
 
 services:
   postgres:
-    container_name: postgres
+    container_name: personal-postgres
     image: postgres
     environment:
       POSTGRES_USER: admin
@@ -19,7 +19,7 @@ services:
       - global-default
 
   pgadmin:
-    container_name: pgadmin4
+    container_name: personal-pgadmin4
     image: dpage/pgadmin4
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@admin.com
