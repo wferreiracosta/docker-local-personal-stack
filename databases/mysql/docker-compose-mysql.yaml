@@ -2,6 +2,7 @@ version: '3.3'
 volumes:
   data:
 services:
+
   mysql:
     image: mysql:8.0
     ports:
@@ -11,6 +12,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=localdatabase
+
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     links:
