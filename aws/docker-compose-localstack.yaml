@@ -2,8 +2,8 @@ version: '3'
 
 services:
 
-  aws-localstack:
-    container_name: aws-localstack
+  localstack:
+    container_name: localstack
     image: localstack/localstack
     networks:
       - global-default
