@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+
+  aws-localstack:
+    container_name: aws-localstack
+    image: localstack/localstack
+    networks:
+      - global-default
+    ports:
+      - 4566:4566
+    environment:
+      - SERVICES=s3,sqs,secretsmanager
+
+networks:
+  global-default:
+    external: true
